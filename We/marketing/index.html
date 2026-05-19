@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我们 App / We App</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6e9d2;
+      --surface: #fff7eb;
+      --text: #3c291c;
+      --muted: #705748;
+      --accent: #b97a32;
+      --line: #d9be97;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    .card {
+      background: rgba(255, 247, 235, 0.88);
+      border: 1px solid rgba(217, 190, 151, 0.72);
+      border-radius: 18px;
+      padding: 24px;
+      margin: 0 0 18px;
+    }
+
+    .hero {
+      padding: 34px 28px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .nav a {
+      display: inline-block;
+      border: 1px solid rgba(185, 122, 50, 0.42);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: rgba(255, 253, 252, 0.58);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .language-label {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .feature {
+      background: rgba(255, 253, 252, 0.58);
+      border: 1px solid rgba(217, 190, 151, 0.58);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card hero">
+      <p class="language-label">中文</p>
+      <p class="eyebrow">温和的人际关系维护助手</p>
+      <h1 id="zh">我们</h1>
+      <p>把重要的人放在眼前。记录联系节奏、关系分和待联系提醒，用温和的方式维护真正重要的关系。</p>
+      <p class="note">“我们”不是销售 CRM，也不会替你判断谁更重要。它更像一个安静的关系备忘录：帮你看见、记录和行动，把主动权留给你。</p>
+      <div class="nav" aria-label="Page navigation">
+        <a href="#zh">中文</a>
+        <a href="#en">English</a>
+        <a href="../">隐私政策</a>
+        <a href="../support/">支持与帮助</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>核心功能</h2>
+      <div class="grid">
+        <div class="feature">
+          <h3>联系人管理</h3>
+          <p>新增、编辑、搜索、标签筛选，也可以从系统通讯录中选择部分联系人导入。</p>
+        </div>
+        <div class="feature">
+          <h3>手动关系评分</h3>
+          <p>用 1-10 分表达你对一段关系重要程度的主观判断，分数由你自己维护。</p>
+        </div>
+        <div class="feature">
+          <h3>联系记录</h3>
+          <p>记录电话、微信聊天、聚餐、散步等互动，让最近一次联系时间清晰可见。</p>
+        </div>
+        <div class="feature">
+          <h3>待联系列表</h3>
+          <p>太久未联系的人会进入待联系列表，帮你知道今天可以从谁开始。</p>
+        </div>
+        <div class="feature">
+          <h3>本地提醒</h3>
+          <p>为关系维护和联系计划设置克制的本地通知，不暴露过多关系细节。</p>
+        </div>
+        <div class="feature">
+          <h3>本地优先</h3>
+          <p>当前版本以本机保存为主，不接入广告追踪或第三方分析。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>适合谁使用</h2>
+      <ul>
+        <li>想认真维护亲友、同学、合作伙伴、客户或导师关系的人。</li>
+        <li>经常想起“应该联系一下谁”，但容易拖延或忘记的人。</li>
+        <li>希望知道上次什么时候联系过某个人，并保留互动脉络的人。</li>
+        <li>希望把关系维护变成可持续小习惯，而不是临时想起的压力的人。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>隐私与克制</h2>
+      <p>当前版本不提供账号、云同步、广告追踪或第三方分析。通讯录只在你主动导入时读取用于预览，只有你勾选并确认的人会保存到 App 内。</p>
+      <p>联系记录、关系评分、标签、头像、联系计划和提醒偏好主要保存在当前设备本地。</p>
+    </div>
+
+    <div class="card">
+      <h2>联系与支持</h2>
+      <p>支持邮箱：<a href="mailto:l_charlie@163.com">l_charlie@163.com</a></p>
+      <p class="meta">App Store 上架后，你也可以通过 App Store 页面下载和查看版本信息。</p>
+    </div>
+
+    <div class="card hero" lang="en">
+      <p class="language-label">English</p>
+      <p class="eyebrow">A gentle relationship maintenance companion</p>
+      <h1 id="en">We</h1>
+      <p>Keep important people in sight. Record contact rhythms, relationship scores, and follow-up reminders in a calm, personal way.</p>
+      <p class="note">We is not a sales CRM, and it does not decide who matters for you. It is a quiet relationship notebook that helps you notice, record, and act while keeping the decision in your hands.</p>
+      <div class="nav" aria-label="Page navigation">
+        <a href="#zh">中文</a>
+        <a href="#en">English</a>
+        <a href="../">Privacy Policy</a>
+        <a href="../support/">Support</a>
+      </div>
+    </div>
+
+    <div class="card" lang="en">
+      <h2>Key Features</h2>
+      <div class="grid">
+        <div class="feature">
+          <h3>Contact management</h3>
+          <p>Add, edit, search, filter by tags, and import selected people from system contacts.</p>
+        </div>
+        <div class="feature">
+          <h3>Manual relationship scores</h3>
+          <p>Use a 1-10 score to express your own sense of relationship importance. The score is maintained by you.</p>
+        </div>
+        <div class="feature">
+          <h3>Interaction records</h3>
+          <p>Record phone calls, WeChat chats, meals, walks, and other interactions so the last contact time is clear.</p>
+        </div>
+        <div class="feature">
+          <h3>Follow-up list</h3>
+          <p>People you have not contacted for a while appear in a focused follow-up list so you know where to start.</p>
+        </div>
+        <div class="feature">
+          <h3>Local reminders</h3>
+          <p>Set restrained local notifications for relationship maintenance and contact plans without exposing too many details.</p>
+        </div>
+        <div class="feature">
+          <h3>Local-first</h3>
+          <p>The current version is mainly stored on device and does not integrate advertising tracking or third-party analytics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" lang="en">
+      <h2>Who It Is For</h2>
+      <ul>
+        <li>People who want to maintain friends, family, classmates, collaborators, clients, mentors, or partners with intention.</li>
+        <li>People who often think "I should reach out" but forget or delay it.</li>
+        <li>People who want to know when they last contacted someone and keep a lightweight interaction history.</li>
+        <li>People who want relationship maintenance to become a sustainable habit instead of occasional pressure.</li>
+      </ul>
+    </div>
+
+    <div class="card" lang="en">
+      <h2>Privacy and Restraint</h2>
+      <p>The current version does not provide accounts, cloud sync, advertising tracking, or third-party analytics. System contacts are read only when you actively import contacts for preview, and only people you select and confirm are saved into the app.</p>
+      <p>Interaction records, relationship scores, tags, avatars, contact plans, and reminder preferences are mainly stored locally on the current device.</p>
+    </div>
+
+    <div class="card" lang="en">
+      <h2>Contact and Support</h2>
+      <p>Support email: <a href="mailto:l_charlie@163.com">l_charlie@163.com</a></p>
+      <p class="meta">After release, you can also download the app and view version information on its App Store page.</p>
+    </div>
+  </div>
+</body>
+</html>

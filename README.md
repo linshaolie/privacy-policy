@@ -4,12 +4,16 @@ Static privacy policy pages for apps.
 
 ## Pages
 
-- We: `We/index.html`
+- We Privacy Policy: `We/index.html`
+- We Support: `We/support/index.html`
+- We Marketing: `We/marketing/index.html`
 
-After GitHub Pages is enabled for this repository, the We privacy policy should be available at:
+After GitHub Pages is enabled for this repository, the We pages should be available at:
 
 ```text
 https://linshaolie.github.io/privacy-policy/We/
+https://linshaolie.github.io/privacy-policy/We/support/
+https://linshaolie.github.io/privacy-policy/We/marketing/
 ```
 
 GitHub Pages setup:
