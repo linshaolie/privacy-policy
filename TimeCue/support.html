@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>到点了 / TimeCue 支持</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --text: #20242a;
+      --muted: #5f6873;
+      --line: #d9d4ca;
+      --accent: #386d68;
+      --accent-strong: #244f4a;
+      --soft: #eef5f3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.66;
+    }
+
+    a {
+      color: var(--accent-strong);
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 42px 20px 64px;
+    }
+
+    .hero {
+      padding: 22px 0 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin: 0 0 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.26;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 34px;
+    }
+
+    h3 {
+      color: var(--accent-strong);
+      font-size: 18px;
+      margin-top: 22px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 18px 44px rgba(38, 43, 47, 0.08);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 22px 0 6px;
+    }
+
+    .tile {
+      background: var(--soft);
+      border: 1px solid #c8ddda;
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 132px;
+    }
+
+    .tile strong {
+      color: var(--accent-strong);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .contact {
+      align-items: center;
+      background: #fdfbf5;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background: var(--accent-strong);
+      border-radius: 999px;
+      color: #ffffff;
+      display: inline-block;
+      font-weight: 700;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--accent-strong);
+    }
+
+    .lang {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding-top: 26px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 14px 44px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <p class="eyebrow">TimeCue Support</p>
+      <h1>到点了 / TimeCue 支持</h1>
+      <p class="lead">这里提供安装要求、常见问题、隐私说明和联系入口，帮助你排查提醒、闹钟权限和录音铃声相关问题。</p>
+    </div>
+
+    <div class="panel">
+      <div>
+        <h2>快速信息</h2>
+        <div class="grid">
+          <div class="tile">
+            <strong>适用系统</strong>
+            <p>TimeCue 使用 iOS 26+ 的系统闹钟能力，请在支持 iOS 26 或更高版本的 iPhone 或 iPad 上使用。</p>
+          </div>
+          <div class="tile">
+            <strong>数据位置</strong>
+            <p>提醒计划、备注和录音保存在设备本地。当前版本无需账号，不提供云同步。</p>
+          </div>
+          <div class="tile">
+            <strong>联系邮箱</strong>
+            <p><a href="mailto:l_charlie@163.com">l_charlie@163.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>常见问题</h2>
+
+        <h3>提醒没有响铃怎么办？</h3>
+        <ol>
+          <li>确认设备系统为 iOS 26 或更高版本。</li>
+          <li>打开系统设置，确认 TimeCue 的闹钟权限已允许。</li>
+          <li>确认提醒计划处于启用状态，并且下一次响铃时间仍在未来。</li>
+          <li>如果提醒特别重要，请同时使用另一个确认方式，避免受到系统权限、设备状态或系统设置影响。</li>
+        </ol>
+
+        <h3>为什么需要闹钟权限？</h3>
+        <p>TimeCue 使用系统闹钟能力来安排你主动创建的提醒。没有闹钟权限时，应用无法安排真实响铃。</p>
+
+        <h3>为什么需要麦克风权限？</h3>
+        <p>麦克风仅用于你主动录制提醒铃声。TimeCue 不会后台录音、持续监听或上传音频。</p>
+
+        <h3>如何删除提醒或录音？</h3>
+        <p>你可以在应用内删除提醒计划。录音铃声可以在提醒编辑页试听、替换或删除。卸载应用通常也会删除应用本地数据。</p>
+
+        <h3>TimeCue 可以用于医疗、安全监护或紧急报警吗？</h3>
+        <p>不可以。TimeCue 是普通日常提醒工具，不是医疗、安全监护、紧急报警或替代人工照护产品。</p>
+      </div>
+
+      <div>
+        <h2>隐私与数据</h2>
+        <p>当前版本不包含广告、追踪、账号系统、第三方分析或云同步。更多说明请查看 <a href="privacy-policy.html">隐私政策</a>。</p>
+      </div>
+
+      <div class="contact">
+        <div>
+          <strong>仍然需要帮助？</strong>
+          <p class="muted">请描述设备型号、iOS 版本、TimeCue 版本、提醒设置和你遇到的现象。</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="mailto:l_charlie@163.com">发送邮件</a>
+          <a class="button secondary" href="https://apps.apple.com/us/app/%E5%88%B0%E7%82%B9%E4%BA%86-timecue/id6770298013">下载 iOS 版</a>
+        </div>
+      </div>
+
+      <div class="lang" lang="en">
+        <h2>English Support</h2>
+        <p>TimeCue requires iOS 26 or later and uses the iOS system alarm capability for reminders that you create yourself. Reminder plans, notes, and recorded sounds stay on your device. The current version does not require an account and does not include ads, tracking, analytics, or cloud sync.</p>
+        <p>Download TimeCue from the <a href="https://apps.apple.com/us/app/%E5%88%B0%E7%82%B9%E4%BA%86-timecue/id6770298013">App Store</a>. For help, email <a href="mailto:l_charlie@163.com">l_charlie@163.com</a>. Please include your device model, iOS version, TimeCue version, reminder settings, and a short description of the issue.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
