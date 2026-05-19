@@ -16,6 +16,12 @@ https://linshaolie.github.io/privacy-policy/We/support/
 https://linshaolie.github.io/privacy-policy/We/marketing/
 ```
 
+iOS download:
+
+```text
+https://apps.apple.com/us/app/%E6%88%91%E4%BB%AC-we-connection/id6770479789
+```
+
 GitHub Pages setup:
 
 ```text
