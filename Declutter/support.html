@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>断舍离 / Declutter 支持</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f3ea;
+      --panel: #fffdf8;
+      --text: #2b2721;
+      --muted: #71695e;
+      --line: #e7dbcc;
+      --accent: #2e6a4f;
+      --accent-strong: #224d3b;
+      --soft: #ddeadd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.66;
+    }
+
+    a {
+      color: var(--accent-strong);
+    }
+
+    .page {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 42px 20px 64px;
+    }
+
+    .hero {
+      padding: 22px 0 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.26;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 34px;
+    }
+
+    h3 {
+      color: var(--accent-strong);
+      font-size: 18px;
+      margin-top: 22px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 740px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 18px 44px rgba(43, 39, 33, 0.08);
+      padding: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 22px 0 6px;
+    }
+
+    .tile {
+      background: var(--soft);
+      border: 1px solid #cfe0cf;
+      border-radius: 8px;
+      min-height: 132px;
+      padding: 16px;
+    }
+
+    .tile strong {
+      color: var(--accent-strong);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .contact {
+      align-items: center;
+      background: #fdfbf5;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background: var(--accent-strong);
+      border-radius: 999px;
+      color: #ffffff;
+      display: inline-block;
+      font-weight: 700;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--accent-strong);
+    }
+
+    .lang {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding-top: 26px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 14px 44px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 22px 18px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <p class="eyebrow">Declutter Support</p>
+      <h1>断舍离 / Declutter 支持</h1>
+      <p class="lead">这里整理了系统要求、常见问题、照片权限、广告与会员说明，以及联系支持时建议提供的信息，方便你更快解决问题。</p>
+    </div>
+
+    <div class="panel">
+      <div>
+        <h2>快速信息</h2>
+        <div class="grid">
+          <div class="tile">
+            <strong>适用系统</strong>
+            <p>Declutter 当前项目配置要求 iOS 26 或更高版本，支持 iPhone 和 iPad。</p>
+          </div>
+          <div class="tile">
+            <strong>数据位置</strong>
+            <p>物品、分类、位置和照片以设备本地保存为主，不需要先登录账号。</p>
+          </div>
+          <div class="tile">
+            <strong>联系邮箱</strong>
+            <p><a href="mailto:l_charlie@163.com">l_charlie@163.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>常见问题</h2>
+
+        <h3>1. 我新增的物品、照片或备注保存在哪里？</h3>
+        <p>当前版本主要保存在设备本地。你记录的物品名称、分类、位置、备注、照片和状态，主要用于你自己后续查看和整理。</p>
+
+        <h3>2. 为什么需要相机或相册权限？</h3>
+        <p>当你主动给物品拍照，或从相册选择图片时，Declutter 才会使用对应权限。没有这些权限时，你仍然可以录入文字信息，只是不能添加相关照片。</p>
+
+        <h3>3. 如果我不想看广告怎么办？</h3>
+        <p>当前版本支持激励广告解锁额外名额，也支持一次性购买永久解锁。若你不使用广告或购买流程，相关能力不会帮你自动完成解锁。</p>
+
+        <h3>4. 购买后没有立即生效怎么办？</h3>
+        <ol>
+          <li>先确认网络与 App Store 账户状态正常。</li>
+          <li>等待系统完成购买确认。</li>
+          <li>重新打开应用，检查权益状态是否刷新。</li>
+          <li>如果仍未生效，请发送邮件并附上购买时间、设备型号和系统版本。</li>
+        </ol>
+
+        <h3>5. 删除物品后还能恢复吗？</h3>
+        <p>当前版本里，删除通常意味着把该记录从本地台账中移除。对于已做过处理记录的物品，你可以在已处理列表里回看历史；但被彻底删除的记录不保证自动恢复。</p>
+
+        <h3>6. 为什么状态会变成“待断舍离”或“即将到期”？</h3>
+        <p>应用会根据你设置的阈值天数、提醒窗口和上次使用时间，自动判断状态。这是为了帮助你更快筛出长期未使用的物品。</p>
+      </div>
+
+      <div>
+        <h2>联系支持时建议附带的信息</h2>
+        <ul>
+          <li>设备型号和 iOS 版本。</li>
+          <li>Declutter 版本号。</li>
+          <li>你操作到了哪一步，例如新增物品、添加照片、观看广告或发起购买。</li>
+          <li>遇到的报错提示、截图或复现步骤。</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>隐私与数据</h2>
+        <p>更多关于本地存储、照片、广告和内购数据处理方式的说明，请查看 <a href="privacy-policy.html">隐私政策</a>。</p>
+      </div>
+
+      <div class="contact">
+        <div>
+          <strong>仍然需要帮助？</strong>
+          <p class="muted">发邮件时建议附上设备型号、iOS 版本、应用版本和问题截图，我们会更容易定位问题。</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="mailto:l_charlie@163.com">发送邮件</a>
+          <a class="button secondary" href="https://apps.apple.com/us/app/%E8%BF%98%E5%9C%A8%E7%94%A8%E5%90%97-%E6%96%AD%E8%88%8D%E7%A6%BB/id6776732657">下载 iOS 版</a>
+        </div>
+      </div>
+
+      <div class="lang" lang="en">
+        <h2>English Support</h2>
+        <p>Declutter currently targets iOS 26 or later on iPhone and iPad. Item records, categories, locations, notes, and photos are primarily stored on the device. The app uses camera or photo library access only when you actively add photos. The current version also includes rewarded ad and one-time purchase flows for unlocking more capacity.</p>
+        <p>If you need help, please email <a href="mailto:l_charlie@163.com">l_charlie@163.com</a> and include your device model, iOS version, app version, the step where the issue happened, and a short screenshot or description.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
