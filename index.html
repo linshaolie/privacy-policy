@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaolie Apps</title>
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="%23a36b2c"/><text x="50%25" y="56%25" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="white">A</text></svg>'>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ee;
+      --panel: #fffdfa;
+      --text: #2c2621;
+      --muted: #766e64;
+      --line: #e4ddd2;
+      --shadow: 0 16px 40px rgba(44, 38, 33, 0.06);
+      --max-width: 880px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+
+    .header {
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand-mark,
+    .icon-fallback {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      background: #9e6c34;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 20px;
+    }
+
+    .brand-copy span,
+    .intro,
+    .app-meta,
+    .loading,
+    .error {
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .intro {
+      margin: 0;
+      max-width: 40em;
+    }
+
+    .app-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .app-row {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      transition: border-color 150ms ease, transform 150ms ease;
+    }
+
+    .app-row:hover,
+    .app-row:focus-visible {
+      border-color: #cfc4b4;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .app-icon {
+      align-self: start;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--accent-soft, #efe7db);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .app-copy {
+      align-self: start;
+      display: grid;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .app-name {
+      display: block;
+      margin: 0 0 4px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .app-summary {
+      display: block;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .app-meta {
+      display: flex;
+      align-self: start;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .chevron {
+      font-size: 20px;
+      color: #a48d70;
+    }
+
+    .loading,
+    .error {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .error {
+      color: #8d4734;
+    }
+
+    @media (max-width: 640px) {
+      .app-row {
+        grid-template-columns: 56px minmax(0, 1fr);
+      }
+
+      .app-meta {
+        grid-column: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-mark">App</span>
+        <span class="brand-copy">
+          <strong id="site-title">Shaolie Apps</strong>
+          <span id="site-subtitle">个人应用总览</span>
+        </span>
+      </div>
+      <h1 id="hero-title">应用列表</h1>
+      <p class="intro" id="hero-description">这里只展示应用 icon、名称和一句简介。点进某个应用后，再看详细描述、链接和截图。</p>
+    </header>
+
+    <main>
+      <div id="app-list" class="app-list">
+        <div class="loading">正在读取应用配置...</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./site-config.js"></script>
+  <script src="./site.js"></script>
+  <script>
+    async function bootstrap() {
+      const list = document.getElementById("app-list");
+
+      try {
+        const config = await window.appSite.loadConfig("./site-config.json");
+        const apps = Array.isArray(config.apps) ? config.apps : [];
+        const site = config.site || {};
+
+        document.title = site.browserTitle || site.title || "Apps";
+        document.getElementById("site-title").textContent = site.title || "Shaolie Apps";
+        document.getElementById("site-subtitle").textContent = site.subtitle || "";
+        document.getElementById("hero-title").textContent = "应用列表";
+        document.getElementById("hero-description").textContent =
+          site.listDescription || "这里只展示应用 icon、名称和一句简介。点进某个应用后，再看详细描述、链接和截图。";
+
+        list.innerHTML = apps.map((app) => window.appSite.renderAppListItem(app)).join("");
+      } catch (error) {
+        list.innerHTML = `<div class="error">${window.appSite.escapeHtml(error.message || "读取配置失败")}</div>`;
+      }
+    }
+
+    bootstrap();
+  </script>
+</body>
+</html>

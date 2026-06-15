@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Detail</title>
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="%23a36b2c"/><text x="50%25" y="56%25" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="white">A</text></svg>'>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ee;
+      --panel: #fffdfa;
+      --soft: #faf6ef;
+      --text: #2c2621;
+      --muted: #766e64;
+      --line: #e4ddd2;
+      --shadow: 0 18px 44px rgba(44, 38, 33, 0.06);
+      --max-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--accent-soft, #efe7db);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent, #8b6b43);
+      font-size: 28px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+      line-height: 1.12;
+    }
+
+    .tagline {
+      margin: 0 0 10px;
+      color: var(--accent, #8b6b43);
+      font-size: 18px;
+    }
+
+    .description {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--accent, #8b6b43);
+      border-color: var(--accent, #8b6b43);
+      color: #fff;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .shot {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .shot img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .shot span {
+      display: block;
+      padding: 10px 12px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .empty,
+    .loading,
+    .error {
+      color: var(--muted);
+    }
+
+    .error {
+      color: #8d4734;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back-link" href="./index.html">&larr; 返回应用列表</a>
+
+    <main class="card" id="app-detail">
+      <div class="loading">正在读取应用详情...</div>
+    </main>
+  </div>
+
+  <script src="./site-config.js"></script>
+  <script src="./site.js"></script>
+  <script>
+    function renderImageSection(app) {
+      if (!app.images || !app.images.length) {
+        return '<p class="empty">这个应用暂时还没有配置截图。</p>';
+      }
+
+      return `
+        <div class="gallery">
+          ${app.images.map((image) => `
+            <figure class="shot">
+              <img src="${window.appSite.escapeHtml(image.src)}" alt="${window.appSite.escapeHtml(image.alt || app.name)}">
+              <span>${window.appSite.escapeHtml(image.caption || image.alt || "")}</span>
+            </figure>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    async function bootstrap() {
+      const root = document.getElementById("app-detail");
+
+      try {
+        const config = await window.appSite.loadConfig("./site-config.json");
+        const app = window.appSite.findAppFromLocation(config.apps || [], window.location);
+
+        if (!app) {
+          root.innerHTML = '<div class="error">没有找到对应的应用配置，请返回首页重新选择。</div>';
+          return;
+        }
+
+        document.title = `${app.name} - ${config.site?.title || "Apps"}`;
+
+        root.innerHTML = `
+          <section class="hero">
+            <div class="app-icon" style="--accent:${window.appSite.escapeHtml(app.accent)};--accent-soft:${window.appSite.escapeHtml(app.accentSoft)};">
+              ${window.appSite.renderIcon(app)}
+            </div>
+            <div>
+              <div class="meta">
+                ${app.platform ? `<span class="pill">${window.appSite.escapeHtml(app.platform)}</span>` : ""}
+                ${app.status ? `<span class="pill">${window.appSite.escapeHtml(app.status)}</span>` : ""}
+              </div>
+              <h1>${window.appSite.escapeHtml(app.name)}${app.englishName ? ` / ${window.appSite.escapeHtml(app.englishName)}` : ""}</h1>
+              ${app.tagline ? `<p class="tagline" style="--accent:${window.appSite.escapeHtml(app.accent)};">${window.appSite.escapeHtml(app.tagline)}</p>` : ""}
+              <p class="description">${window.appSite.escapeHtml(app.description || app.summary || "")}</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>相关链接</h2>
+            <div class="links">
+              ${(app.links || []).map((link) => `
+                <a class="button ${link.primary ? "primary" : ""}" href="${window.appSite.escapeHtml(link.url)}">${window.appSite.escapeHtml(link.label)}</a>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>产品亮点</h2>
+            <ul>
+              ${(app.highlights || []).map((item) => `<li>${window.appSite.escapeHtml(item)}</li>`).join("")}
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>截图</h2>
+            ${renderImageSection(app)}
+          </section>
+        `;
+      } catch (error) {
+        root.innerHTML = `<div class="error">${window.appSite.escapeHtml(error.message || "读取配置失败")}</div>`;
+      }
+    }
+
+    bootstrap();
+  </script>
+</body>
+</html>

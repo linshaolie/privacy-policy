@@ -1,0 +1,177 @@
+window.__SITE_CONFIG__ = {
+  "site": {
+    "title": "Shaolie Apps",
+    "subtitle": "个人应用总览",
+    "browserTitle": "Shaolie Apps",
+    "heroBadge": "Independent App Directory",
+    "heroTitle": "一个根目录首页，集中展示我的 app、页面和截图。",
+    "description": "这个首页会从 JSON 配置里自动读取应用信息、产品简介、图片和页面链接。以后你只需要新增或修改配置项，就可以继续扩展整个站点。",
+    "note": "推荐把新 app 的名称、状态、链接、页面地址和图片都维护在同一个 JSON 文件里，首页会自动更新。",
+    "catalogDescription": "上面的概览卡片和下面的详细区都由同一份 JSON 渲染，适合后续持续增加 app。",
+    "footerText": "静态首页 + JSON 配置的结构已经就位，保持 GitHub Pages 的部署方式不变。",
+    "contactEmail": "l_charlie@163.com"
+  },
+  "dynamicAppSource": {
+    "provider": "apple-lookup",
+    "developerId": 1271194461,
+    "country": "cn",
+    "entity": "software"
+  },
+  "apps": [
+    {
+      "appStoreId": 6770298013,
+      "slug": "timecue",
+      "name": "到点了",
+      "englishName": "TimeCue",
+      "platform": "iOS App",
+      "status": "已上架",
+      "iconSrc": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/1d/1f/441d1f8f-fa0a-6d3b-881a-601325c25a26/Placeholder.mill/400x400bb-75.webp",
+      "iconText": "点",
+      "accent": "#386d68",
+      "accentSoft": "linear-gradient(135deg, #d9ebe6 0%, #f3efe6 100%)",
+      "tagline": "把重要时刻准时叫醒的本地提醒工具。",
+      "summary": "TimeCue 是一款本地提醒与系统响铃工具，主打创建、重复、暂停、恢复和响铃体验。",
+      "description": "TimeCue 适合需要高频提醒和明确响铃反馈的场景。这个站点已经有它的营销页、支持页、隐私页和现成截图，因此首页会优先把它展示成完整样例。",
+      "highlights": [
+        "本地优先，不依赖账号登录或云同步。",
+        "已有营销页、支持页、隐私页和多张截图。",
+        "适合做 JSON 驱动图片展示的参考样例。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/%E5%88%B0%E7%82%B9%E4%BA%86-timecue/id6770298013",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "TimeCue/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "TimeCue/support.html"
+        },
+        {
+          "label": "隐私页",
+          "url": "TimeCue/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "TimeCue/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "TimeCue/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "TimeCue/privacy-policy.html"
+        }
+      ],
+      "images": [
+        {
+          "src": "TimeCue/screenshots/zh-Hans/iphone-6.5/01-home.png",
+          "alt": "TimeCue 首页提醒列表",
+          "caption": "提醒列表首页"
+        },
+        {
+          "src": "TimeCue/screenshots/zh-Hans/iphone-6.5/02-create.png",
+          "alt": "TimeCue 创建提醒界面",
+          "caption": "创建提醒"
+        },
+        {
+          "src": "TimeCue/screenshots/zh-Hans/iphone-6.5/03-repeat.png",
+          "alt": "TimeCue 重复提醒设置",
+          "caption": "重复规则"
+        },
+        {
+          "src": "TimeCue/screenshots/zh-Hans/iphone-6.5/05-ringing.png",
+          "alt": "TimeCue 响铃界面",
+          "caption": "响铃界面"
+        }
+      ]
+    },
+    {
+      "appStoreId": 6770479789,
+      "slug": "we",
+      "name": "我们",
+      "englishName": "We",
+      "platform": "iOS App",
+      "status": "已上架",
+      "iconSrc": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/ea/df/03eadf51-98be-2a81-841d-98209f95816f/Placeholder.mill/400x400bb-75.webp",
+      "iconText": "我",
+      "accent": "#b97a32",
+      "accentSoft": "linear-gradient(135deg, #f5dfbf 0%, #fff2df 100%)",
+      "tagline": "联系人关系维护、联系节奏记录与本地提醒。",
+      "summary": "We 关注联系人、关系评分、联系计划和本地提醒，是一款偏关系维护的记录型应用。",
+      "description": "We 这个 app 在仓库里采用目录结构，已经有隐私页、支持页和营销页。首页会把这些入口统一挂出来，后续如果你给它补海报图或截图，也只需要在 JSON 中增加图片数组。",
+      "highlights": [
+        "强调本地使用，不依赖账号、云同步或第三方分析。",
+        "支持页、营销页和隐私页路径已经现成可用。",
+        "适合继续补联系人管理相关截图或产品海报。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/%E6%88%91%E4%BB%AC-we-connection/id6770479789",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "We/marketing/"
+        },
+        {
+          "label": "支持页",
+          "url": "We/support/"
+        },
+        {
+          "label": "隐私页",
+          "url": "We/"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "We/marketing/"
+        },
+        {
+          "label": "支持页",
+          "url": "We/support/"
+        },
+        {
+          "label": "隐私政策",
+          "url": "We/"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/08/4e/22084ea3-e3e3-f8b3-6365-c3f9300e20ec/01-relationship-overview.png/600x1300bb.webp",
+          "alt": "We 关系总览截图",
+          "caption": "关系总览"
+        },
+        {
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d4/03/ab/d403ab3e-7a99-a91a-aaa9-7283ec44a8cd/02-follow-up-list.png/600x1300bb.webp",
+          "alt": "We 待联系列表截图",
+          "caption": "待联系列表"
+        },
+        {
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/60/86/92/608692a2-498c-1ad5-c57a-0a4a2d187cdf/03-contact-detail.png/600x1300bb.webp",
+          "alt": "We 联系人详情截图",
+          "caption": "联系人详情"
+        },
+        {
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7f/b5/c7/7fb5c7bb-a079-04f8-3cfa-a627a54e20cf/04-interaction-history.png/600x1300bb.webp",
+          "alt": "We 联系历史截图",
+          "caption": "联系历史"
+        },
+        {
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/72/d3/bd/72d3bdc5-ca08-2b0b-c56c-3d548c6594b5/05-log-interaction.png/600x1300bb.webp",
+          "alt": "We 记录联系截图",
+          "caption": "记录联系"
+        }
+      ]
+    }
+  ]
+};
