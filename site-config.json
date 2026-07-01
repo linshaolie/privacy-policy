@@ -193,9 +193,13 @@
       ],
       "links": [
         {
-          "label": "支持页",
-          "url": "WonderPlay/support.html",
+          "label": "营销页",
+          "url": "WonderPlay/marketing.html",
           "primary": true
+        },
+        {
+          "label": "支持页",
+          "url": "WonderPlay/support.html"
         },
         {
           "label": "隐私页",
@@ -203,6 +207,10 @@
         }
       ],
       "pages": [
+        {
+          "label": "营销页",
+          "url": "WonderPlay/marketing.html"
+        },
         {
           "label": "支持页",
           "url": "WonderPlay/support.html"
@@ -212,7 +220,28 @@
           "url": "WonderPlay/privacy-policy.html"
         }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "WonderPlay/assets/marketing/iphone-hero-zh.png",
+          "alt": "WonderPlay 中文 iPhone 横屏营销图",
+          "caption": "好奇心小游戏"
+        },
+        {
+          "src": "WonderPlay/assets/marketing/ipad-gallery-zh.png",
+          "alt": "WonderPlay 中文 iPad 营销图",
+          "caption": "iPad 玩法展示"
+        },
+        {
+          "src": "WonderPlay/assets/marketing/iphone-color-zh.png",
+          "alt": "WonderPlay 颜色魔法营销图",
+          "caption": "颜色魔法"
+        },
+        {
+          "src": "WonderPlay/assets/marketing/iphone-hero-en.png",
+          "alt": "WonderPlay English iPhone landscape marketing image",
+          "caption": "English marketing"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>奇趣玩 / WonderPlay</title>
+  <meta name="description" content="奇趣玩 WonderPlay 是给孩子的触控、混色和动作小游戏，支持 iPhone 与 iPad 横屏体验。">
+  <style>
+    :root {
+      --bg: #f8f6ef;
+      --panel: #fffdf8;
+      --text: #24252b;
+      --muted: #626b73;
+      --line: #dfd8ca;
+      --accent: #b04f42;
+      --accent-strong: #87392f;
+      --sun: #f0b64b;
+      --leaf: #5f8d65;
+      --sky: #587da8;
+      --soft: #fff0df;
+      --shadow: 0 24px 60px rgba(42, 37, 29, 0.16);
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88svh;
+      overflow: hidden;
+      background: #f0dcc0;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(90deg, rgba(248, 246, 239, 0.98) 0%, rgba(248, 246, 239, 0.88) 42%, rgba(248, 246, 239, 0.36) 72%, rgba(248, 246, 239, 0.18) 100%),
+        url("assets/marketing/iphone-hero-zh.png");
+      background-position: center right;
+      background-size: cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 190px;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(248, 246, 239, 0) 0%, var(--bg) 100%);
+    }
+
+    .nav,
+    .hero-inner,
+    .section-inner,
+    .footer-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(135, 57, 47, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      color: #3e454c;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(135, 57, 47, 0.2);
+      border-radius: 8px;
+      padding: 7px 12px;
+      background: rgba(255, 253, 248, 0.66);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-inner {
+      min-height: calc(88svh - 92px);
+      display: flex;
+      align-items: center;
+      padding: 56px 0 120px;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-strong);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 18px 0 18px;
+      max-width: 620px;
+      font-size: clamp(3.1rem, 8vw, 6.9rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 570px;
+      margin-bottom: 28px;
+      color: #3d464d;
+      font-size: clamp(1.05rem, 2.2vw, 1.38rem);
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 11px 18px;
+      border: 1px solid transparent;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fffdf8;
+      box-shadow: 0 14px 30px rgba(176, 79, 66, 0.25);
+    }
+
+    .button.secondary {
+      border-color: rgba(36, 37, 43, 0.16);
+      background: rgba(255, 253, 248, 0.72);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border-radius: 8px;
+      padding: 6px 11px;
+      background: rgba(255, 253, 248, 0.78);
+      border: 1px solid rgba(135, 57, 47, 0.18);
+      color: #3f464d;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section.alt {
+      background: #fffaf0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-header h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      min-height: 260px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      background: var(--panel);
+      box-shadow: 0 10px 30px rgba(42, 37, 29, 0.06);
+    }
+
+    .feature-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      margin-bottom: 22px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.35rem;
+    }
+
+    .feature-card:nth-child(2) .feature-mark {
+      background: var(--leaf);
+    }
+
+    .feature-card:nth-child(3) .feature-mark {
+      background: var(--sky);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.35rem;
+      letter-spacing: 0;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .shot {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #111;
+      box-shadow: var(--shadow);
+    }
+
+    .shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 2.172 / 1;
+    }
+
+    .shot.tall img {
+      aspect-ratio: 1.333 / 1;
+    }
+
+    .shot-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 15px;
+      background: #fffdf8;
+      color: #444b52;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .shot-caption span:last-child {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .trust-item {
+      border-top: 3px solid var(--accent);
+      padding: 18px 0 0;
+    }
+
+    .trust-item:nth-child(2) {
+      border-color: var(--sun);
+    }
+
+    .trust-item:nth-child(3) {
+      border-color: var(--leaf);
+    }
+
+    .trust-item:nth-child(4) {
+      border-color: var(--sky);
+    }
+
+    .trust-item h3 {
+      margin-bottom: 7px;
+      font-size: 1.15rem;
+    }
+
+    .trust-item p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+      background: #2f3836;
+      color: #fffdf8;
+      padding: 54px;
+      border-radius: 8px;
+    }
+
+    .closing h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .closing p {
+      margin-bottom: 0;
+      color: rgba(255, 253, 248, 0.78);
+    }
+
+    .closing .button.primary {
+      background: #fffdf8;
+      color: #2f3836;
+      box-shadow: none;
+    }
+
+    .closing .button.secondary {
+      background: transparent;
+      border-color: rgba(255, 253, 248, 0.34);
+      color: #fffdf8;
+    }
+
+    footer {
+      padding: 34px 0 48px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner a {
+      color: var(--accent-strong);
+      font-weight: 800;
+    }
+
+    @media (max-width: 820px) {
+      .hero::before {
+        background-image:
+          linear-gradient(180deg, rgba(248, 246, 239, 0.96) 0%, rgba(248, 246, 239, 0.82) 45%, rgba(248, 246, 239, 0.28) 100%),
+          url("assets/marketing/iphone-hero-zh.png");
+        background-position: center bottom;
+      }
+
+      .nav,
+      .hero-inner,
+      .section-inner,
+      .footer-inner {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero-inner {
+        align-items: flex-start;
+        padding-top: 36px;
+      }
+
+      .feature-grid,
+      .showcase-grid,
+      .trust-grid,
+      .closing {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .closing {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: clamp(2.65rem, 16vw, 4rem);
+      }
+
+      .actions,
+      .closing .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .feature-card {
+        min-height: auto;
+      }
+
+      .shot-caption {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="WonderPlay">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html">
+          <img src="assets/app-icon.png" alt="WonderPlay app icon">
+          <span>奇趣玩 / WonderPlay</span>
+        </a>
+        <div class="nav-links">
+          <a href="#games">玩法</a>
+          <a href="#screenshots">截图</a>
+          <a href="support.html">支持</a>
+          <a href="privacy-policy.html">隐私</a>
+        </div>
+      </nav>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Ready for App Store</div>
+          <h1>奇趣玩 / WonderPlay</h1>
+          <p class="lead">给孩子的触控、混色和动作小游戏。Tap, mix colors, aim a goal, and explore quick cause-and-effect moments together.</p>
+          <div class="actions">
+            <a class="button primary" href="#screenshots">查看截图</a>
+            <a class="button secondary" href="support.html">支持页面</a>
+          </div>
+          <div class="badges" aria-label="Product facts">
+            <span class="badge">iPhone & iPad 横屏</span>
+            <span class="badge">中文 / English</span>
+            <span class="badge">无账号 / 无广告</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>三种小游戏，短时间也能玩得投入。</h2>
+          <p>WonderPlay 把动作反馈、颜色探索和方向力度练习做成轻量关卡，适合孩子自己探索，也适合亲子一起玩。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-mark">1</div>
+            <h3>点点点 / Dot Dot Dot</h3>
+            <p>点击、摇动、划动屏幕，观察圆点如何即时回应。吹气和拍手识别仅在设备本地完成。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-mark">2</div>
+            <h3>颜色魔法 / Color Magic</h3>
+            <p>拖动红、黄、蓝，让孩子在混色变化里看见结果，建立直观的颜色关系。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-mark">3</div>
+            <h3>弹射球门 / Sling Goal</h3>
+            <p>拉住小球、调整方向、等待机会，练习力量控制和空间判断。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>横屏展示，为 App Store 物料准备。</h2>
+          <p>页面复用当前的 iPhone 与 iPad 营销截图，展示中文主视觉、颜色玩法，以及英文版本的上架素材。</p>
+        </div>
+        <div class="showcase-grid">
+          <figure class="shot">
+            <img src="assets/marketing/iphone-hero-zh.png" alt="WonderPlay 中文 iPhone 横屏营销图">
+            <figcaption class="shot-caption"><span>好奇心小游戏</span><span>iPhone 横屏</span></figcaption>
+          </figure>
+          <figure class="shot tall">
+            <img src="assets/marketing/ipad-gallery-zh.png" alt="WonderPlay 中文 iPad 营销图">
+            <figcaption class="shot-caption"><span>选择玩法</span><span>iPad</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/marketing/iphone-color-zh.png" alt="WonderPlay 颜色魔法营销图">
+            <figcaption class="shot-caption"><span>颜色魔法</span><span>中文</span></figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/marketing/iphone-hero-en.png" alt="WonderPlay English iPhone landscape marketing image">
+            <figcaption class="shot-caption"><span>Curiosity Game</span><span>English</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>儿童产品先把边界说清楚。</h2>
+          <p>当前版本专注本地小游戏体验，不做账号体系、广告投放、第三方分析或云同步。</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-item">
+            <h3>无需账号</h3>
+            <p>孩子打开即可玩，不需要注册、登录或填写个人资料。</p>
+          </article>
+          <article class="trust-item">
+            <h3>无广告</h3>
+            <p>体验中不插入广告，也不包含应用内购买流程。</p>
+          </article>
+          <article class="trust-item">
+            <h3>无追踪</h3>
+            <p>不接入第三方分析 SDK，不构建跨应用追踪。</p>
+          </article>
+          <article class="trust-item">
+            <h3>本地识别</h3>
+            <p>麦克风仅用于 Dot Dot Dot 的吹气和拍手互动，音频不会上传。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section-inner">
+        <div class="closing">
+          <div>
+            <h2>面向提交，页面和资料已经串起来。</h2>
+            <p>营销页、支持页、隐私政策与首页目录保持同一套入口，方便后续 App Store Connect 填写和审核查看。</p>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="privacy-policy.html">隐私政策</a>
+            <a class="button secondary" href="mailto:l_charlie@163.com?subject=WonderPlay%20Support">联系支持</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 WonderPlay. Built for App Store preparation.</span>
+      <span><a href="../index.html">Shaolie Apps</a></span>
+    </div>
+  </footer>
+</body>
+</html>
