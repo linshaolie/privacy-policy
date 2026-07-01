@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>奇趣玩 / WonderPlay 支持</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8f6ef;
+      --panel: #ffffff;
+      --text: #24252b;
+      --muted: #626b73;
+      --line: #dfd8ca;
+      --accent: #b04f42;
+      --accent-strong: #87392f;
+      --soft: #fff0df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.66;
+    }
+
+    a {
+      color: var(--accent-strong);
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 42px 20px 64px;
+    }
+
+    .hero {
+      padding: 22px 0 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin: 0 0 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.26;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 34px;
+    }
+
+    h3 {
+      color: var(--accent-strong);
+      font-size: 18px;
+      margin-top: 22px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 18px 44px rgba(41, 39, 33, 0.08);
+      padding: 28px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 22px 0 6px;
+    }
+
+    .tile {
+      background: var(--soft);
+      border: 1px solid #f0d7ba;
+      border-radius: 8px;
+      min-height: 132px;
+      padding: 16px;
+    }
+
+    .tile strong {
+      color: var(--accent-strong);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .contact {
+      align-items: center;
+      background: #fdfbf5;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background: var(--accent-strong);
+      border-radius: 999px;
+      color: #ffffff;
+      display: inline-block;
+      font-weight: 700;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--accent-strong);
+    }
+
+    .lang {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding-top: 26px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 14px 44px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <p class="eyebrow">WonderPlay Support</p>
+      <h1>奇趣玩 / WonderPlay 支持</h1>
+      <p class="lead">这里提供安装要求、常见问题、隐私说明和联系入口，帮助你排查游戏、声音识别和权限相关问题。</p>
+    </div>
+
+    <div class="panel">
+      <div>
+        <h2>快速信息</h2>
+        <div class="grid">
+          <div class="tile">
+            <strong>适用系统</strong>
+            <p>WonderPlay 支持 iOS 17 或更高版本，可在 iPhone 和 iPad 上横屏使用。</p>
+          </div>
+          <div class="tile">
+            <strong>隐私设计</strong>
+            <p>当前版本无需账号，不包含广告、内购、第三方分析或云同步。</p>
+          </div>
+          <div class="tile">
+            <strong>联系邮箱</strong>
+            <p><a href="mailto:l_charlie@163.com">l_charlie@163.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>常见问题</h2>
+
+        <h3>为什么需要麦克风权限？</h3>
+        <p>点点点游戏会用麦克风识别吹气和拍手等声音强度变化，让游戏里的点点产生互动反馈。音频只在设备本地实时分析，不会被录制、保存或上传。</p>
+
+        <h3>拒绝麦克风权限后还能玩吗？</h3>
+        <p>可以继续游玩不依赖麦克风的内容，例如颜色魔法和弹射球门。点点点中需要吹气或拍手的步骤可能无法完整触发。你可以在系统设置中重新允许麦克风权限。</p>
+
+        <h3>游戏没有声音或没有反馈怎么办？</h3>
+        <ol>
+          <li>确认设备没有静音，并调高媒体音量。</li>
+          <li>确认设备系统为 iOS 17 或更高版本。</li>
+          <li>如果是吹气或拍手步骤，请确认已允许麦克风权限。</li>
+          <li>尝试退出游戏后重新进入，或重启应用。</li>
+        </ol>
+
+        <h3>应用是否需要联网？</h3>
+        <p>当前版本的核心游戏不需要账号或联网服务。应用不提供云同步，也不会上传游戏过程或麦克风音频。</p>
+
+        <h3>是否适合儿童使用？</h3>
+        <p>WonderPlay 面向儿童和亲子陪伴场景设计。建议儿童在家长或监护人陪伴下使用，尤其是在首次授权麦克风权限时。</p>
+      </div>
+
+      <div>
+        <h2>隐私与数据</h2>
+        <p>当前版本不包含广告、追踪、账号系统、第三方分析或云同步。更多说明请查看 <a href="privacy-policy.html">隐私政策</a>。</p>
+      </div>
+
+      <div class="contact">
+        <div>
+          <strong>仍然需要帮助？</strong>
+          <p class="muted">请描述设备型号、iOS 版本、WonderPlay 版本、所在游戏和你遇到的现象。</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="mailto:l_charlie@163.com">发送邮件</a>
+          <a class="button secondary" href="../app.html?slug=wonderplay">查看应用信息</a>
+        </div>
+      </div>
+
+      <div class="lang" lang="en">
+        <h2>English Support</h2>
+        <p>WonderPlay supports iOS 17 or later and runs in landscape on iPhone and iPad. The current version does not require an account and does not include ads, tracking, analytics, cloud sync, or in-app purchases.</p>
+        <p>Dot Dot Dot may ask for microphone permission to detect blowing and clapping for gameplay. Audio is processed on device for sound intensity only and is not recorded, saved, uploaded, or shared.</p>
+        <p>For help, email <a href="mailto:l_charlie@163.com">l_charlie@163.com</a>. Please include your device model, iOS version, WonderPlay version, the game you were playing, and a short description of the issue.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

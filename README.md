@@ -14,6 +14,8 @@ Static privacy policy pages for apps.
 - Declutter Privacy Policy: `Declutter/privacy-policy.html`
 - Declutter Support: `Declutter/support.html`
 - Declutter Marketing: `Declutter/marketing.html`
+- WonderPlay Privacy Policy: `WonderPlay/privacy-policy.html`
+- WonderPlay Support: `WonderPlay/support.html`
 
 ## Home Page Config
 
@@ -54,6 +56,13 @@ Declutter pages should be available at:
 https://linshaolie.github.io/privacy-policy/Declutter/privacy-policy.html
 https://linshaolie.github.io/privacy-policy/Declutter/support.html
 https://linshaolie.github.io/privacy-policy/Declutter/marketing.html
+```
+
+WonderPlay pages should be available at:
+
+```text
+https://linshaolie.github.io/privacy-policy/WonderPlay/privacy-policy.html
+https://linshaolie.github.io/privacy-policy/WonderPlay/support.html
 ```
 
 iOS download:

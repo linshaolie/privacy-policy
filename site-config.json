@@ -172,6 +172,47 @@
           "caption": "记录联系"
         }
       ]
+    },
+    {
+      "slug": "wonderplay",
+      "name": "奇趣玩",
+      "englishName": "WonderPlay",
+      "platform": "iOS App",
+      "status": "准备提交",
+      "iconSrc": "WonderPlay/assets/app-icon.png",
+      "iconText": "奇",
+      "accent": "#b04f42",
+      "accentSoft": "linear-gradient(135deg, #ffe5c4 0%, #e7f4de 55%, #e7f0ff 100%)",
+      "tagline": "给孩子的触控、混色和动作小游戏。",
+      "summary": "WonderPlay 是一组为儿童和亲子陪伴设计的互动小游戏，包含点点点、颜色魔法和弹射球门。",
+      "description": "WonderPlay 让孩子通过点击、摇一摇、倾斜、拍手、拖动和瞄准来探索因果、颜色和力度。当前版本无需账号，不包含广告、内购、第三方分析或云同步。",
+      "highlights": [
+        "三款可玩小游戏：点点点、颜色魔法、弹射球门。",
+        "支持中文和英文，适合 iPhone 和 iPad 横屏使用。",
+        "隐私设计简洁：无账号、无广告、无追踪，麦克风仅用于本地识别吹气和拍手。"
+      ],
+      "links": [
+        {
+          "label": "支持页",
+          "url": "WonderPlay/support.html",
+          "primary": true
+        },
+        {
+          "label": "隐私页",
+          "url": "WonderPlay/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "支持页",
+          "url": "WonderPlay/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "WonderPlay/privacy-policy.html"
+        }
+      ],
+      "images": []
     }
   ]
 }
