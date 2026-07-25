@@ -16,6 +16,9 @@ Static privacy policy pages for apps.
 - Declutter Marketing: `Declutter/marketing.html`
 - WonderPlay Privacy Policy: `WonderPlay/privacy-policy.html`
 - WonderPlay Support: `WonderPlay/support.html`
+- OneThought Privacy Policy: `OneThought/privacy-policy.html`
+- OneThought Support: `OneThought/support.html`
+- OneThought Marketing: `OneThought/marketing.html`
 
 ## Home Page Config
 
@@ -63,6 +66,14 @@ WonderPlay pages should be available at:
 ```text
 https://linshaolie.github.io/privacy-policy/WonderPlay/privacy-policy.html
 https://linshaolie.github.io/privacy-policy/WonderPlay/support.html
+```
+
+OneThought pages should be available at:
+
+```text
+https://linshaolie.github.io/privacy-policy/OneThought/privacy-policy.html
+https://linshaolie.github.io/privacy-policy/OneThought/support.html
+https://linshaolie.github.io/privacy-policy/OneThought/marketing.html
 ```
 
 iOS download:
