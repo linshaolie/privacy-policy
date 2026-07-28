@@ -321,6 +321,71 @@
           "caption": "随喜结缘"
         }
       ]
+    },
+    {
+      "appStoreId": 1275877336,
+      "slug": "lovepiano",
+      "name": "最爱钢琴曲",
+      "englishName": "LovePiano",
+      "platform": "iOS App",
+      "status": "已上架",
+      "iconSrc": "LovePiano/assets/app-icon.png",
+      "iconText": "琴",
+      "accent": "#e67c73",
+      "accentSoft": "linear-gradient(135deg, #171717 0%, #3a2422 100%)",
+      "tagline": "让熟悉的琴声，陪你慢下来。",
+      "summary": "最爱钢琴曲是一款简洁的钢琴音乐播放器，提供精选曲目、收藏、最近播放、定时关闭与后台播放。",
+      "description": "从通勤、阅读到睡前时光，最爱钢琴曲用简洁的播放体验陪伴每一个安静片刻。你可以搜索和收藏曲目、查看最近播放、切换播放模式与速度，并设置按时间或曲目数量自动停止。",
+      "highlights": [
+        "精选钢琴音乐，支持搜索、收藏和最近播放。",
+        "顺序、循环、单曲与随机播放，并可调整播放速度。",
+        "支持后台播放、锁屏控制和定时关闭，可通过一次性内购移除广告。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/id1275877336",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "LovePiano/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "LovePiano/support.html"
+        },
+        {
+          "label": "隐私页",
+          "url": "LovePiano/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "LovePiano/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "LovePiano/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "LovePiano/privacy-policy.html"
+        }
+      ],
+      "images": [
+        {
+          "src": "LovePiano/assets/piano-rose.jpg",
+          "alt": "钢琴键与玫瑰",
+          "caption": "让琴声陪你慢下来"
+        },
+        {
+          "src": "LovePiano/assets/piano-keys.jpg",
+          "alt": "钢琴键特写",
+          "caption": "精选钢琴音乐"
+        }
+      ]
     }
   ]
 }

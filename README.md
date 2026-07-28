@@ -19,6 +19,9 @@ Static privacy policy pages for apps.
 - OneThought Privacy Policy: `OneThought/privacy-policy.html`
 - OneThought Support: `OneThought/support.html`
 - OneThought Marketing: `OneThought/marketing.html`
+- LovePiano Privacy Policy: `LovePiano/privacy-policy.html`
+- LovePiano Support: `LovePiano/support.html`
+- LovePiano Marketing: `LovePiano/marketing.html`
 
 ## Home Page Config
 
@@ -74,6 +77,14 @@ OneThought pages should be available at:
 https://linshaolie.github.io/privacy-policy/OneThought/privacy-policy.html
 https://linshaolie.github.io/privacy-policy/OneThought/support.html
 https://linshaolie.github.io/privacy-policy/OneThought/marketing.html
+```
+
+LovePiano pages should be available at:
+
+```text
+https://linshaolie.github.io/privacy-policy/LovePiano/privacy-policy.html
+https://linshaolie.github.io/privacy-policy/LovePiano/support.html
+https://linshaolie.github.io/privacy-policy/LovePiano/marketing.html
 ```
 
 iOS download:
