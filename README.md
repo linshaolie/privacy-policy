@@ -102,3 +102,11 @@ Source: Deploy from a branch
 Branch: master
 Folder: / (root)
 ```
+
+## MeloKit / 音乐利器（待发布）
+
+- `MeloKit/privacy-policy.html`：中英双语隐私政策
+- `MeloKit/support.html`：中英双语支持与联系方式
+- `MeloKit/marketing.html`：产品介绍
+
+目标路径：`https://linshaolie.github.io/privacy-policy/MeloKit/`。2026-09-24 已完成本地页面，尚未执行发布。
