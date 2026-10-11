@@ -22,6 +22,9 @@ Static privacy policy pages for apps.
 - LovePiano Privacy Policy: `LovePiano/privacy-policy.html`
 - LovePiano Support: `LovePiano/support.html`
 - LovePiano Marketing: `LovePiano/marketing.html`
+- MiracleTask Privacy Policy: `MiracleTask/privacy-policy.html`
+- MiracleTask Support: `MiracleTask/support.html`
+- MiracleTask Marketing: `MiracleTask/marketing.html`
 
 ## Home Page Config
 
@@ -87,6 +90,14 @@ https://linshaolie.github.io/privacy-policy/LovePiano/support.html
 https://linshaolie.github.io/privacy-policy/LovePiano/marketing.html
 ```
 
+MiracleTask pages should be available at:
+
+```text
+https://linshaolie.github.io/privacy-policy/MiracleTask/privacy-policy.html
+https://linshaolie.github.io/privacy-policy/MiracleTask/support.html
+https://linshaolie.github.io/privacy-policy/MiracleTask/marketing.html
+```
+
 iOS download:
 
 ```text
@@ -110,3 +121,18 @@ Folder: / (root)
 - `MeloKit/marketing.html`：产品介绍
 
 目标路径：`https://linshaolie.github.io/privacy-policy/MeloKit/`。2026-09-24 已完成本地页面，尚未执行发布。
+
+## MiracleTask（待发布）
+
+- `MiracleTask/privacy-policy.html`：中英双语隐私政策
+- `MiracleTask/support.html`：中英双语支持与常见问题
+- `MiracleTask/marketing.html`：中英双语产品介绍
+- `MiracleTask/assets/`：营销页用的网页尺寸图标与宣传图
+
+页面完成于 2026-10-12，尚未发布。目标地址：
+
+- `https://linshaolie.github.io/privacy-policy/MiracleTask/privacy-policy.html`
+- `https://linshaolie.github.io/privacy-policy/MiracleTask/support.html`
+- `https://linshaolie.github.io/privacy-policy/MiracleTask/marketing.html`
+
+发布后，可将隐私政策、支持和营销地址分别填入 App Store Connect。MiracleTask 付费页的隐私政策链接已指向上面的隐私政策地址。
