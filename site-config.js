@@ -316,6 +316,71 @@ window.__SITE_CONFIG__ = {
           "caption": "精选钢琴音乐"
         }
       ]
+    },
+    {
+      "appStoreId": 1294747584,
+      "slug": "just-run",
+      "name": "Just Run",
+      "englishName": "Just Run",
+      "platform": "iOS App",
+      "status": "App Store",
+      "iconSrc": "JustRun/assets/app-icon.png",
+      "iconText": "跑",
+      "accent": "#dc963f",
+      "accentSoft": "linear-gradient(135deg, #f7ebd4 0%, #f0b96d 100%)",
+      "tagline": "跑起来，让音乐陪着你。",
+      "summary": "Just Run 是一款为跑步与日常聆听准备的音乐播放器，支持收藏、最近播放、定时关闭和后台播放。",
+      "description": "浏览应用内置曲库，选择喜欢的音乐；收藏曲目、查看最近播放、切换播放模式、调整速度并设置定时关闭。开始播放后，可在切换应用或锁屏时继续聆听。",
+      "highlights": [
+        "浏览内置音乐曲库，保存收藏并查看最近播放。",
+        "支持顺序、循环、单曲与随机播放，可调整播放速度并设置定时关闭。",
+        "支持后台播放与系统媒体控制；可通过 Apple 一次性内购移除广告。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/id1294747584",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "JustRun/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "JustRun/support.html"
+        },
+        {
+          "label": "隐私页",
+          "url": "JustRun/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "JustRun/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "JustRun/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "JustRun/privacy-policy.html"
+        }
+      ],
+      "images": [
+        {
+          "src": "JustRun/assets/runner-forest.jpg",
+          "alt": "林间步道上的跑者",
+          "caption": "林间奔跑"
+        },
+        {
+          "src": "JustRun/assets/runner-sunset.jpg",
+          "alt": "日落时分的跑步小径",
+          "caption": "日落聆听"
+        }
+      ]
     }
   ]
 };

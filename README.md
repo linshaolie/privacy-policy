@@ -22,6 +22,9 @@ Static privacy policy pages for apps.
 - LovePiano Privacy Policy: `LovePiano/privacy-policy.html`
 - LovePiano Support: `LovePiano/support.html`
 - LovePiano Marketing: `LovePiano/marketing.html`
+- Just Run Privacy Policy: `JustRun/privacy-policy.html`
+- Just Run Support: `JustRun/support.html`
+- Just Run Marketing: `JustRun/marketing.html`
 - MiracleTask Privacy Policy: `MiracleTask/privacy-policy.html`
 - MiracleTask Support: `MiracleTask/support.html`
 - MiracleTask Marketing: `MiracleTask/marketing.html`
@@ -98,6 +101,14 @@ https://linshaolie.github.io/privacy-policy/MiracleTask/support.html
 https://linshaolie.github.io/privacy-policy/MiracleTask/marketing.html
 ```
 
+Just Run pages should be available at:
+
+```text
+https://linshaolie.github.io/privacy-policy/JustRun/privacy-policy.html
+https://linshaolie.github.io/privacy-policy/JustRun/support.html
+https://linshaolie.github.io/privacy-policy/JustRun/marketing.html
+```
+
 iOS download:
 
 ```text
@@ -136,3 +147,16 @@ Folder: / (root)
 - `https://linshaolie.github.io/privacy-policy/MiracleTask/marketing.html`
 
 发布后，可将隐私政策、支持和营销地址分别填入 App Store Connect。MiracleTask 付费页的隐私政策链接已指向上面的隐私政策地址。
+
+## Just Run（待发布）
+
+- `JustRun/privacy-policy.html`：中英双语隐私政策
+- `JustRun/support.html`：中英双语支持与常见问题
+- `JustRun/marketing.html`：中英双语产品介绍
+- `JustRun/assets/`：应用图标与营销图片
+
+页面已于 2026-10-13 本地完成，尚未发布。目标地址：
+
+- `https://linshaolie.github.io/privacy-policy/JustRun/privacy-policy.html`
+- `https://linshaolie.github.io/privacy-policy/JustRun/support.html`
+- `https://linshaolie.github.io/privacy-policy/JustRun/marketing.html`
