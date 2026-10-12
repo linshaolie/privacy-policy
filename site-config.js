@@ -318,6 +318,126 @@ window.__SITE_CONFIG__ = {
       ]
     },
     {
+      "appStoreId": 1271194462,
+      "slug": "yue-crosstalk",
+      "name": "岳云鹏相声",
+      "englishName": "Yue Crosstalk",
+      "platform": "iOS App",
+      "status": "已上架",
+      "iconSrc": "YueYunPengPlayer/assets/app-icon.png",
+      "iconText": "岳",
+      "accent": "#c95b65",
+      "accentSoft": "linear-gradient(135deg, #f9e5e1 0%, #f1a4a4 100%)",
+      "tagline": "熟悉的相声，随时听一段。",
+      "summary": "收录相声曲目的播放器，可搜索曲目、收藏喜欢的内容、查看最近播放，并设置定时关闭。",
+      "description": "岳云鹏相声播放器提供随应用安装的本地曲库、曲目搜索、收藏、最近播放、播放模式与速度控制、后台播放和定时关闭。收藏和播放记录主要保存在设备本地。",
+      "highlights": [
+        "内置相声曲库，支持浏览与搜索。",
+        "收藏、最近播放与播放次数保存在本地。",
+        "支持后台播放、系统媒体控制与定时关闭；可通过 Apple 一次性内购移除广告。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/id1271194462",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "YueYunPengPlayer/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "YueYunPengPlayer/support.html"
+        },
+        {
+          "label": "隐私页",
+          "url": "YueYunPengPlayer/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "YueYunPengPlayer/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "YueYunPengPlayer/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "YueYunPengPlayer/privacy-policy.html"
+        }
+      ],
+      "images": [
+        {
+          "src": "YueYunPengPlayer/assets/cover.jpg",
+          "alt": "岳云鹏相声插画",
+          "caption": "熟悉的相声，随时听一段"
+        }
+      ]
+    },
+    {
+      "appStoreId": 1332325022,
+      "slug": "qingqu-crosstalk",
+      "name": "青曲相声",
+      "englishName": "Qingqu Crosstalk",
+      "platform": "iOS App",
+      "status": "已上架",
+      "iconSrc": "MFWS/assets/app-icon.png",
+      "iconText": "曲",
+      "accent": "#c6a542",
+      "accentSoft": "linear-gradient(135deg, #f5edc9 0%, #f3d980 100%)",
+      "tagline": "青曲相声，陪你听一段。",
+      "summary": "收录相声曲目的播放器，支持曲目搜索、收藏、最近播放、后台聆听与定时关闭。",
+      "description": "青曲相声播放器提供随应用安装的本地曲库、曲目搜索、收藏、最近播放、播放模式与速度控制、后台播放和定时关闭。收藏和播放记录主要保存在设备本地。",
+      "highlights": [
+        "内置相声曲库，支持浏览与搜索。",
+        "收藏、最近播放与播放次数保存在本地。",
+        "支持后台播放、系统媒体控制与定时关闭；可通过 Apple 一次性内购移除广告。"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/cn/app/id1332325022",
+          "primary": true
+        },
+        {
+          "label": "营销页",
+          "url": "MFWS/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "MFWS/support.html"
+        },
+        {
+          "label": "隐私页",
+          "url": "MFWS/privacy-policy.html"
+        }
+      ],
+      "pages": [
+        {
+          "label": "营销页",
+          "url": "MFWS/marketing.html"
+        },
+        {
+          "label": "支持页",
+          "url": "MFWS/support.html"
+        },
+        {
+          "label": "隐私政策",
+          "url": "MFWS/privacy-policy.html"
+        }
+      ],
+      "images": [
+        {
+          "src": "MFWS/assets/cover.png",
+          "alt": "青曲相声插画",
+          "caption": "青曲相声，陪你听一段"
+        }
+      ]
+    },
+    {
       "appStoreId": 1294747584,
       "slug": "just-run",
       "name": "Just Run",
@@ -383,4 +503,4 @@ window.__SITE_CONFIG__ = {
       ]
     }
   ]
-};
+}

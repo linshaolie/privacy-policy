@@ -22,6 +22,12 @@ Static privacy policy pages for apps.
 - LovePiano Privacy Policy: `LovePiano/privacy-policy.html`
 - LovePiano Support: `LovePiano/support.html`
 - LovePiano Marketing: `LovePiano/marketing.html`
+- Yue Crosstalk Privacy Policy: `YueYunPengPlayer/privacy-policy.html`
+- Yue Crosstalk Support: `YueYunPengPlayer/support.html`
+- Yue Crosstalk Marketing: `YueYunPengPlayer/marketing.html`
+- Qingqu Crosstalk Privacy Policy: `MFWS/privacy-policy.html`
+- Qingqu Crosstalk Support: `MFWS/support.html`
+- Qingqu Crosstalk Marketing: `MFWS/marketing.html`
 - Just Run Privacy Policy: `JustRun/privacy-policy.html`
 - Just Run Support: `JustRun/support.html`
 - Just Run Marketing: `JustRun/marketing.html`
@@ -160,3 +166,32 @@ Folder: / (root)
 - `https://linshaolie.github.io/privacy-policy/JustRun/privacy-policy.html`
 - `https://linshaolie.github.io/privacy-policy/JustRun/support.html`
 - `https://linshaolie.github.io/privacy-policy/JustRun/marketing.html`
+
+
+## 岳云鹏相声 / Yue Crosstalk（待发布）
+
+- `YueYunPengPlayer/privacy-policy.html`：中英双语隐私政策
+- `YueYunPengPlayer/support.html`：中英双语支持与常见问题
+- `YueYunPengPlayer/marketing.html`：中英双语产品介绍
+- `YueYunPengPlayer/assets/`：App 图标与产品插画
+
+目标地址：
+
+- https://linshaolie.github.io/privacy-policy/YueYunPengPlayer/privacy-policy.html
+- https://linshaolie.github.io/privacy-policy/YueYunPengPlayer/support.html
+- https://linshaolie.github.io/privacy-policy/YueYunPengPlayer/marketing.html
+
+## 青曲相声 / Qingqu Crosstalk（待发布）
+
+- `MFWS/privacy-policy.html`：中英双语隐私政策
+- `MFWS/support.html`：中英双语支持与常见问题
+- `MFWS/marketing.html`：中英双语产品介绍
+- `MFWS/assets/`：App 图标与产品插画
+
+目标地址：
+
+- https://linshaolie.github.io/privacy-policy/MFWS/privacy-policy.html
+- https://linshaolie.github.io/privacy-policy/MFWS/support.html
+- https://linshaolie.github.io/privacy-policy/MFWS/marketing.html
+
+发布前请在 App Store Connect 复核两个相声 target 的产品名称与下载链接。
